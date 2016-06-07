@@ -4,7 +4,7 @@ Encipher makes it easy for you to encode and decode text.
 
 Encipher takes the input and encodes it, and then generates a random key for decoding it. To decode the text, all you need is the encoded version and the key.
 
-It's simple, easy and relativly secure.
+It's simple, easy and relatively secure.
 
 Example
 -------
