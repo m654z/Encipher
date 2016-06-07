@@ -19,3 +19,14 @@ The first list item is the text, and the second is your key. To decode it:
 
 **Output:** `Hello, world!`
 
+Algorithm
+---------
+
+Encipher's algorithm is actually quite simple. I'll try to explain it here.
+
+1. Encipher generates a string of random numbers as long as the plaintext.
+2. The plaintext is converted into the respective ASCII values.
+3. The random numbers are added to the ASCII values of the plaintext.
+4. The ASCII values are converted into characters again.
+
+To decode it, all you need are the random numbers (the key) and the ciphertext. Just do the algorithm backwards.
