@@ -24,9 +24,9 @@ Algorithm
 
 Encipher's algorithm is actually quite simple. I'll try to explain it here.
 
-1. Encipher generates a string of random numbers as long as the plaintext.
-2. The plaintext is converted into the respective ASCII values.
-3. The random numbers are added to the ASCII values of the plaintext.
-4. The ASCII values are converted into characters again.
+1. Encipher generates a string of random numbers as long as the plaintext. `Hello -> 18284`
+2. The plaintext is converted into the respective ASCII values. `72 101 108, etc.`
+3. The random numbers are added to the ASCII values of the plaintext. `72 + 1 = 73, 101 + 8 = 109, etc.`
+4. The ASCII values are converted into characters again. `Imnts`
 
 To decode it, all you need are the random numbers (the key) and the ciphertext. Just do the algorithm backwards.
