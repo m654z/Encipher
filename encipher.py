@@ -1,7 +1,17 @@
+from itertools import cycle
 import random
 import string
 
+# Simple XOR encryption
+def xor(p, k):
+    o = ""
+    for i, c in enumerate(p):
+        o += chr(ord(c) ^ ord(k[i % len(k)]))
+
+    return o
+
 def encode(text):
+
     digits = list(string.digits)
     text = list(text)
     pword = ""
@@ -11,6 +21,7 @@ def encode(text):
         pword += str(random.choice(digits))
         
     key = list(str(pword))
+    text = xor(text, key)
     
     encoded = ""
     keyI = 0
@@ -30,8 +41,12 @@ def decode(text, key):
         
     decoded = ""
     keyI = 0
+
+    # Subtract the key from the ASCII values of the ciphertext
     for c in text:
         decoded += chr(ord(c) - int(key[keyI]))
         keyI += 1
+
+    decoded = xor(decoded, key)
 
     return decoded
